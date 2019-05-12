@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% for sound in sounds%}
+  <div class="col-lg-4 col-md-6 col-12">
+    <div class="card shadow m-2">
+      <div class="card-header">
+        {{ sound.character}}
+      </div>
+      <div class="card-body">
+        <h4>{{sound.displayName}}</h4>
+          <audio controls>
+          <source src="{{sound.audio}}" type="audio/mpeg">
+          </audio>
+        </button>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+
+{% endblock  %}
