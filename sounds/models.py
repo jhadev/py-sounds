@@ -15,6 +15,5 @@ class Sound(models.Model):
     displayName = models.CharField(max_length=255)
     name = models.CharField(max_length=50)
     character = models.ForeignKey(Character, on_delete=models.CASCADE)
-    charId = models.IntegerField()
     audio = models.CharField(max_length=500)
     date_created = models.DateTimeField(default=timezone.now)

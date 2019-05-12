@@ -5,6 +5,7 @@ from sounds.models import Sound, Character
 class SoundSerializer(serializers.ModelSerializer):
 
     character = serializers.ReadOnlyField(source='character.name')
+    charId = serializers.ReadOnlyField(source='character.id')
 
     class Meta:
         model = Sound

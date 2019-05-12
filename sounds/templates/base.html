@@ -30,18 +30,6 @@
         </li>
         <!--START DYNAMIC NAV-->
         <div class="start-buttons">
-          {% for sound in sounds %}
-
-          {% if sound.charId < 4 %}
-          <li>
-            <button class="btn badge m-1 name gen animated fadeIn badge-secondary" value="{{ sound.character }}">
-              {{ sound.character }}
-              <span class="char-${charId} badge badge-light"></span>
-            </button>
-          </li>
-          {% endif %}
-
-          {% endfor %}
         </div>
         <li class="nav-item">
           <button class="btn badge m-1 name animated fadeIn badge-secondary" id="Other">
@@ -65,9 +53,6 @@
   <div class="container">
     <!--START SOUNDS-->
     <div class="row start">
-      {% block content %}
-
-      {% endblock %}
     </div>
     <br />
   </div>
