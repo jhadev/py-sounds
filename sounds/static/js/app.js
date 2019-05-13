@@ -2,21 +2,23 @@ $(document).ready(() => {
   let items;
 
   $.ajax({
-    url: '/sounds/api/sounds?format=json',
+    url: '/api/sounds?format=json',
     method: 'GET'
-  }).then(function(response) {
-    console.log(response);
-    items = response;
+  })
+    .then(response => {
+      items = response;
 
-    items.forEach(sound => {
-      let link = sound.audio;
-      sound.audio = new Audio(link);
+      items.forEach(sound => {
+        let link = sound.audio;
+        sound.audio = new Audio(link);
+      });
+      layout(items);
+      genNavItems();
+      countAll();
+    })
+    .catch(err => {
+      console.log(err);
     });
-    layout(items);
-    genNavItems();
-    countAll();
-    console.log(items);
-  });
 
   const capitalizeEveryWord = str => {
     return str
@@ -167,7 +169,6 @@ $(document).ready(() => {
     const otherArray = itemsClone.filter(
       item => id === 'Other' && item.charId > 4
     );
-    //match character names with navbar badge HTML for filtering. "Other" will match with characters not matched with these charIds are above 4
     $('.start').empty();
     if (id === 'Other') {
       otherArray.sort(sortByCharacter);
@@ -255,21 +256,10 @@ $(document).ready(() => {
     }
   };
 
-  //CLICK FUNCTION TO PLAY
   $(document).on('click', '.play', playSound);
-
-  //CLICK FUNCTION TO PAUSE
   $(document).on('click', '.stop', stopSound);
-
-  //CLICK FUNCTION TO SORT DOM
   $(document).on('click', '.sort', sortAll);
-
-  //CLICK FUNCTION TO REBUILD DOM
   $(document).on('click', '.name', filterByCharacter);
-
-  //CLICK FUNCTION FOR RANDOM
   $('.random').on('click', random);
-
-  //CLICK FUNCTION FOR THEME
   $('.theme').on('click', checkTheme);
 });
