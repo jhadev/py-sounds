@@ -32,7 +32,7 @@ INSTALLED_APPS = [
     'django.contrib.admin', 'django.contrib.auth',
     'django.contrib.contenttypes', 'django.contrib.sessions',
     'django.contrib.messages', 'django.contrib.staticfiles',
-    'sounds.apps.SoundsConfig', 'rest_framework'
+    'sounds.apps.SoundsConfig', 'rest_framework', 'home.apps.HomeConfig'
 ]
 
 MIDDLEWARE = [
