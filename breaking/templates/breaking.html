@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 
-{% comment %} BLOCK CSS {% endcomment %}
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="{% static "css/breaking.css" %}" />
+{% endblock css %}
 
 {% block title %}
 Breaking Bad Sounds
