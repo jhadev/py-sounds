@@ -1,20 +1,23 @@
-:root {
-  --main-color: #424E52;
-  --secondary-color: #89BBCC;
-  --accent-color: #BCC0C2;
-  --dark-accent-color: #8B8E8F;
-  --light-accent-color: #DCE1E3;
-}
-
-.hero {
+.spacer {
   display: flex;
   flex-direction: column;
-  min-height: 85vh;
-  background-image: url('https://user-images.githubusercontent.com/42519030/57652834-70d80a80-759e-11e9-9a32-57d550847429.jpg');
+  min-height: 50vh;
   background-attachment: fixed;
   background-position: center;
   background-blend-mode: multiply;
   background-size: cover;
-  background-color: var(--secondary-color);
-  color: var(--light-accent-color);
+}
+
+.links:link {
+  color: #fff !important;
+}
+
+.bg {
+  background-image: url('https://user-images.githubusercontent.com/42519030/57652834-70d80a80-759e-11e9-9a32-57d550847429.jpg');
+  font-family: 'Raleway', sans-serif;
+}
+
+.jumbotron,
+.container {
+  background: transparent !important;
 }
