@@ -24,7 +24,7 @@ SECRET_KEY = 'img#4f1fa6j+(0d4z37dl6&thzl=x7u4**0fb2l51vc$o(_w6+'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['pacific-brushlands-87351.herokuapp.com', '127.0.0.1']
 
 # Application definition
 
@@ -32,11 +32,13 @@ INSTALLED_APPS = [
     'django.contrib.admin', 'django.contrib.auth',
     'django.contrib.contenttypes', 'django.contrib.sessions',
     'django.contrib.messages', 'django.contrib.staticfiles',
-    'sounds.apps.SoundsConfig', 'rest_framework', 'home.apps.HomeConfig'
+    'sounds.apps.SoundsConfig', 'rest_framework', 'home.apps.HomeConfig',
+    'breaking.apps.BreakingConfig'
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -114,3 +116,4 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
