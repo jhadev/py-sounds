@@ -1,0 +1,23 @@
+.spacer {
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
+.links:link {
+  color: #fff !important;
+}
+
+.bg {
+  background-image: url('https://user-images.githubusercontent.com/42519030/57652834-70d80a80-759e-11e9-9a32-57d550847429.jpg');
+  font-family: 'Raleway', sans-serif;
+}
+
+.jumbotron,
+.container {
+  background: transparent !important;
+}

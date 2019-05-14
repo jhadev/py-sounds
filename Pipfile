@@ -8,6 +8,9 @@ yapf = "*"
 
 [packages]
 django = "*"
+gunicorn = "*"
+whitenoise = "*"
+djangorestframework = "*"
 
 [requires]
 python_version = "3.7"
