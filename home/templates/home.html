@@ -15,19 +15,27 @@
 
 <body class="bg">
   <div class="spacer">
-  <div class="my-auto text-center text-light">
-    <h1 class="title display-1">Sounds</h1>
-    <h4>demo</h4>
+    <div class="my-auto text-center text-light">
+      <h1 class="title display-1">Sounds</h1>
+      <h4>demo</h4>
     </div>
   </div>
   <div class="container">
     <div class="jumbotron sticky-top text-center">
       <button class="btn btn-lg btn-outline-light m-1">
-        <a class="text-light links" href="/sounds">Go to Soundboard</a>
-      </button>
-      <button class="btn btn-lg btn-outline-light m-1">
         <a class="text-light links" href="/admin">Go to Admin Panel</a>
       </button>
+      <div class="dropdown">
+        <button class="btn btn-outline-light btn-lg dropdown-toggle m-1" type="button" id="dropdownMenuButton"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          View Soundboards
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="/sounds">South Park Sounds</a>
+          <a class="dropdown-item" href="/breaking">Breaking Bad Sounds</a>
+          {% comment %} <a class="dropdown-item" href="#">Something else here</a> {% endcomment %}
+        </div>
+      </div>
     </div>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

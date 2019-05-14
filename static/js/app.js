@@ -2,7 +2,7 @@ $(document).ready(() => {
   let items;
 
   $.ajax({
-    url: '/sounds/api/sounds?format=json',
+    url: endpoint,
     method: 'GET'
   })
     .then(response => {
