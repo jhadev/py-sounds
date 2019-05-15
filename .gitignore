@@ -65,6 +65,8 @@ instance/
 # Scrapy stuff:
 .scrapy
 
+db.sqlite3
+
 # Sphinx documentation
 docs/_build/
 
