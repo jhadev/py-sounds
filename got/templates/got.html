@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block css %}
+{% load static %}
+<link rel="stylesheet" href="{% static "css/got.css" %}" />
+{% endblock css %}
+
+{% block title %}
+GoT Sounds
+{% endblock title %}
+
+{% block script %}
+{% comment %} {% load static %} {% endcomment %}
+<script>
+  const endpoint = '/got/api/got?format=json';
+</script>
+{% endblock %}

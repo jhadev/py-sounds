@@ -20,5 +20,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('sounds/', include('sounds.urls')),
     path('breaking/', include('breaking.urls')),
+    path('got/', include('got.urls')),
     path('', include('home.urls'))
 ]
