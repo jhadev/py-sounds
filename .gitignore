@@ -58,7 +58,8 @@ coverage.xml
 *.log
 local_settings.py
 
-static/
+
+staticfiles/
 
 # Flask stuff:
 instance/
