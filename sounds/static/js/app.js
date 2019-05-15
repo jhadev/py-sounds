@@ -6,15 +6,20 @@ $(document).ready(() => {
     method: 'GET'
   })
     .then(response => {
-      items = response;
+      console.log(response);
+      if (response.length === 0) {
+        $('.error').html(`<h2 class="text-center">No sounds here yet</h2>`);
+      } else {
+        items = response;
 
-      items.forEach(sound => {
-        let link = sound.audio;
-        sound.audio = new Audio(link);
-      });
-      layout(items);
-      genNavItems();
-      countAll();
+        items.forEach(sound => {
+          let link = sound.audio;
+          sound.audio = new Audio(link);
+        });
+        layout(items);
+        genNavItems();
+        countAll();
+      }
     })
     .catch(err => {
       console.log(err);
