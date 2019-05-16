@@ -10,3 +10,4 @@ class SoundSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sound
         fields = '__all__'
+        read_only_fields = ('displayName', 'name', 'audio', 'date_created')
