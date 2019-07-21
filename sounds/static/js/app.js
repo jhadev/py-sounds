@@ -103,16 +103,14 @@ $(document).ready(() => {
       );
     });
 
-    for (let eachCharacter of characters) {
-      const { character, charId } = eachCharacter;
-
+    characters.forEach(({character, charId}) => {
       $('.start-buttons').before(`
       <li>
         <button class="btn badge m-1 name gen animated fadeIn badge-secondary" value="${character}">${character}&nbsp
           <span class="char-${charId} badge badge-light"></span>
         </button>
       </li>`);
-    }
+    })
   };
 
   //STOP FUNC

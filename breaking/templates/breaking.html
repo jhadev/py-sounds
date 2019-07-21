@@ -11,5 +11,7 @@ Breaking Bad Sounds
 
 {% block script %}
 {% load static %}
-<script src="{% static 'js/breaking.js' %}"></script>
+<script>
+  const endpoint = '/breaking/api/breaking?format=json';
+</script>
 {% endblock %}

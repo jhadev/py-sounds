@@ -11,5 +11,7 @@ South Park Sounds
 
 {% block script %}
 {% load static %}
-<script src="{% static 'js/getSp.js' %}"></script>
+<script>
+  const endpoint = '/sounds/api/sounds?format=json';
+</script>
 {% endblock %}
